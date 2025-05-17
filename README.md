@@ -1,547 +1,99 @@
-# GRCoordX
+# Einstein Atlas
 
-**Coordinate Transformation Analysis of Exact Solutions in General Relativity**
+**A Comprehensive Computational Database of Exact Solutions to Einstein’s Field Equations**
 
-## Overview
+---
 
-GRCoordX is a systematic exploration of exact solutions in General Relativity under various coordinate transformations with emphasis on non-trivial coordinate systems such as toroidal coordinates. This repository contains Mathematica notebooks implementing the transformations using xAct, analyzing the resulting metrics, and exploring their geometric and physical properties.
+### Overview
 
-## Project Goals
+Welcome to **Einstein Atlas**, an open research initiative by the **Independent Society of Knowledge (ISK)** aimed at creating the most extensive, rigorously derived, and computationally accessible repository of exact solutions to Einstein’s Field Equations (EFEs).
 
-- Transform standard GR metrics into various coordinate systems
-- Analyze the geometric properties of solutions in different representations
-- Uncover subtleties and nuances introduced by coordinate transformations
-- Provide a comprehensive geometric analysis of each transformed solution
-- Focus on novel insights from representing spacetimes in toroidal coordinates
+Our goal is to systematically catalog **all known exact metrics**—from Minkowski and Schwarzschild to the most complex solutions—together with their coordinate transformations and global causal structures, represented via Penrose diagrams. Each solution is accompanied by detailed symbolic derivations using **Mathematica** and **xAct**, ensuring scientific rigor, reproducibility, and clarity.
 
-## Repository Structure
+---
 
-This repository is organized into series of Mathematica notebooks, each focusing on a specific spacetime and its transformations:
+### What You’ll Find Here
 
-```
-GRCoordX/
-.
-├── 01-minkowski
-│   ├── Minkowski-in-advanced-retarded-time.nb
-│   ├── Minkowski-in-bipolar.nb
-│   ├── Minkowski-in-bispherical.nb
-│   ├── Minkowski-in-bms.nb
-│   ├── Minkowski-in-bondi.nb
-│   ├── Minkowski-in-boyer-lindquist.nb
-│   ├── Minkowski-in-cartesian.nb
-│   ├── Minkowski-in-comoving.nb
-│   ├── Minkowski-in-complex.nb
-│   ├── Minkowski-in-confocal-ellipsoidal.nb
-│   ├── Minkowski-in-conformal.nb
-│   ├── Minkowski-in-conical.nb
-│   ├── Minkowski-in-curvature.nb
-│   ├── Minkowski-in-cylindrical.nb
-│   ├── Minkowski-in-double-null.nb
-│   ├── Minkowski-in-eddington-finkelstein.nb
-│   ├── Minkowski-in-elliptic-cylindrical.nb
-│   ├── Minkowski-in-fermi-normal.nb
-│   ├── Minkowski-in-gaussian-normal.nb
-│   ├── Minkowski-in-gaussian-null.nb
-│   ├── Minkowski-in-geodesic-polar.nb
-│   ├── Minkowski-in-global-patch.nb
-│   ├── Minkowski-in-harmonic.nb
-│   ├── Minkowski-in-horocyclic.nb
-│   ├── Minkowski-in-horospheric.nb
-│   ├── Minkowski-in-hyperspherical.nb
-│   ├── Minkowski-in-isothermal.nb
-│   ├── Minkowski-in-isotropic.nb
-│   ├── Minkowski-in-jacobi-elliptic.nb
-│   ├── Minkowski-in-kaluza-klein.nb
-│   ├── Minkowski-in-kerr-schild.nb
-│   ├── Minkowski-in-kruskal-szekeres.nb
-│   ├── Minkowski-in-lemaitre.nb
-│   ├── Minkowski-in-light-cone.nb
-│   ├── Minkowski-in-milne.nb
-│   ├── Minkowski-in-newman-penrose.nb
-│   ├── Minkowski-in-newman-unti.nb
-│   ├── Minkowski-in-novikov.nb
-│   ├── Minkowski-in-null.nb
-│   ├── Minkowski-in-oblate-spheroidal.nb
-│   ├── Minkowski-in-painleve-gullstrand.nb
-│   ├── Minkowski-in-parabolic.nb
-│   ├── Minkowski-in-paraboloidal.nb
-│   ├── Minkowski-in-penrose.nb
-│   ├── Minkowski-in-plane-polar.nb
-│   ├── Minkowski-in-poincare-disk.nb
-│   ├── Minkowski-in-poincare-half-space.nb
-│   ├── Minkowski-in-prolate-spheroidal.nb
-│   ├── Minkowski-in-proper-distance.nb
-│   ├── Minkowski-in-regge-wheeler.nb
-│   ├── Minkowski-in-rindler.nb
-│   ├── Minkowski-in-spherical.nb
-│   ├── Minkowski-in-static-patch.nb
-│   ├── Minkowski-in-synchronous.nb
-│   ├── Minkowski-in-szekeres-szafron.nb
-│   ├── Minkowski-in-tetrad-frames.nb
-│   ├── Minkowski-in-toroidal.nb
-│   ├── Minkowski-in-twistor.nb
-│   ├── Minkowski-in-weyl-canonical.nb
-│   └── Minkowski-in-york-time.nb
-├── 02-schwarzschild
-│   ├── Schwarzschild-in-cartesian.nb
-│   ├── Schwarzschild-in-cylindrical.nb
-│   ├── Schwarzschild-in-harmonic.nb
-│   ├── Schwarzschild-in-isotropic.nb
-│   ├── Schwarzschild-in-spherical.nb
-│   └── Schwarzschild-in-toroidal.nb
-├── 04-desitter
-│   ├── DeSitter-in-cartesian.nb
-│   ├── DeSitter-in-cylindrical.nb
-│   ├── DeSitter-in-harmonic.nb
-│   ├── DeSitter-in-isotropic.nb
-│   ├── DeSitter-in-spherical.nb
-│   └── DeSitter-in-toroidal.nb
-├── 05-anti-de-sitter
-│   ├── AntiDeSitter-in-cartesian.nb
-│   ├── AntiDeSitter-in-cylindrical.nb
-│   ├── AntiDeSitter-in-harmonic.nb
-│   ├── AntiDeSitter-in-isotropic.nb
-│   ├── AntiDeSitter-in-spherical.nb
-│   └── AntiDeSitter-in-toroidal.nb
-├── 06-reissner-nordstrom
-│   ├── ReissnerNordstrom-in-cartesian.nb
-│   ├── ReissnerNordstrom-in-cylindrical.nb
-│   ├── ReissnerNordstrom-in-harmonic.nb
-│   ├── ReissnerNordstrom-in-isotropic.nb
-│   ├── ReissnerNordstrom-in-spherical.nb
-│   └── ReissnerNordstrom-in-toroidal.nb
-├── 07-kerr-newman
-│   ├── KerrNewman-in-advanced-retarded-time.nb
-│   ├── KerrNewman-in-bipolar.nb
-│   ├── KerrNewman-in-bispherical.nb
-│   ├── KerrNewman-in-bms.nb
-│   ├── KerrNewman-in-bondi.nb
-│   ├── KerrNewman-in-boyer-lindquist.nb
-│   ├── KerrNewman-in-cartesian.nb
-│   ├── KerrNewman-in-comoving.nb
-│   ├── KerrNewman-in-complex.nb
-│   ├── KerrNewman-in-confocal-ellipsoidal.nb
-│   ├── KerrNewman-in-conformal.nb
-│   ├── KerrNewman-in-conical.nb
-│   ├── KerrNewman-in-curvature.nb
-│   ├── KerrNewman-in-cylindrical.nb
-│   ├── KerrNewman-in-double-null.nb
-│   ├── KerrNewman-in-eddington-finkelstein.nb
-│   ├── KerrNewman-in-elliptic-cylindrical.nb
-│   ├── KerrNewman-in-fermi-normal.nb
-│   ├── KerrNewman-in-gaussian-normal.nb
-│   ├── KerrNewman-in-gaussian-null.nb
-│   ├── KerrNewman-in-geodesic-polar.nb
-│   ├── KerrNewman-in-global-patch.nb
-│   ├── KerrNewman-in-harmonic.nb
-│   ├── KerrNewman-in-horocyclic.nb
-│   ├── KerrNewman-in-horospheric.nb
-│   ├── KerrNewman-in-hyperspherical.nb
-│   ├── KerrNewman-in-isothermal.nb
-│   ├── KerrNewman-in-isotropic.nb
-│   ├── KerrNewman-in-jacobi-elliptic.nb
-│   ├── KerrNewman-in-kaluza-klein.nb
-│   ├── KerrNewman-in-kerr-schild.nb
-│   ├── KerrNewman-in-kruskal-szekeres.nb
-│   ├── KerrNewman-in-lemaitre.nb
-│   ├── KerrNewman-in-light-cone.nb
-│   ├── KerrNewman-in-milne.nb
-│   ├── KerrNewman-in-newman-penrose.nb
-│   ├── KerrNewman-in-newman-unti.nb
-│   ├── KerrNewman-in-novikov.nb
-│   ├── KerrNewman-in-null.nb
-│   ├── KerrNewman-in-oblate-spheroidal.nb
-│   ├── KerrNewman-in-painleve-gullstrand.nb
-│   ├── KerrNewman-in-parabolic.nb
-│   ├── KerrNewman-in-paraboloidal.nb
-│   ├── KerrNewman-in-penrose.nb
-│   ├── KerrNewman-in-poincare-disk.nb
-│   ├── KerrNewman-in-poincare-half-space.nb
-│   ├── KerrNewman-in-prolate-spheroidal.nb
-│   ├── KerrNewman-in-proper-distance.nb
-│   ├── KerrNewman-in-regge-wheeler.nb
-│   ├── KerrNewman-in-rindler.nb
-│   ├── KerrNewman-in-static-patch.nb
-│   ├── KerrNewman-in-synchronous.nb
-│   ├── KerrNewman-in-szekeres-szafron.nb
-│   ├── KerrNewman-in-tetrad-frames.nb
-│   ├── KerrNewman-in-toroidal.nb
-│   ├── KerrNewman-in-twistor.nb
-│   ├── KerrNewman-in-weyl-canonical.nb
-│   └── KerrNewman-in-york-time.nb
-├── 08-flrw
-│   ├── FLRW-in-cartesian.nb
-│   ├── FLRW-in-comoving.nb
-│   ├── FLRW-in-conformal.nb
-│   ├── FLRW-in-spherical.nb
-│   └── FLRW-in-synchronous.nb
-├── 09-taub-nut
-│   ├── TaubNUT-in-cartesian.nb
-│   ├── TaubNUT-in-cylindrical.nb
-│   ├── TaubNUT-in-harmonic.nb
-│   ├── TaubNUT-in-isotropic.nb
-│   ├── TaubNUT-in-spherical.nb
-│   └── TaubNUT-in-toroidal.nb
-├── 10-bianchi
-│   ├── Bianchi-in-cartesian.nb
-│   ├── Bianchi-in-cylindrical.nb
-│   ├── Bianchi-in-harmonic.nb
-│   ├── Bianchi-in-isotropic.nb
-│   ├── Bianchi-in-spherical.nb
-│   └── Bianchi-in-toroidal.nb
-├── 11-goedel
-│   ├── Goedel-in-cartesian.nb
-│   ├── Goedel-in-cylindrical.nb
-│   ├── Goedel-in-harmonic.nb
-│   ├── Goedel-in-isotropic.nb
-│   ├── Goedel-in-spherical.nb
-│   └── Goedel-in-toroidal.nb
-├── 12-vaidya
-│   ├── Vaidya-in-cartesian.nb
-│   ├── Vaidya-in-cylindrical.nb
-│   ├── Vaidya-in-harmonic.nb
-│   ├── Vaidya-in-isotropic.nb
-│   ├── Vaidya-in-spherical.nb
-│   └── Vaidya-in-toroidal.nb
-├── 13-kasner
-│   ├── Kasner-in-cartesian.nb
-│   ├── Kasner-in-cylindrical.nb
-│   ├── Kasner-in-harmonic.nb
-│   ├── Kasner-in-isotropic.nb
-│   ├── Kasner-in-spherical.nb
-│   └── Kasner-in-toroidal.nb
-├── 14-pp-wave
-│   ├── PPWave-in-cartesian.nb
-│   ├── PPWave-in-cylindrical.nb
-│   ├── PPWave-in-harmonic.nb
-│   ├── PPWave-in-isotropic.nb
-│   ├── PPWave-in-spherical.nb
-│   └── PPWave-in-toroidal.nb
-├── 15-petrov-type-d
-│   ├── PetrovTypeD-in-cartesian.nb
-│   ├── PetrovTypeD-in-cylindrical.nb
-│   ├── PetrovTypeD-in-harmonic.nb
-│   ├── PetrovTypeD-in-isotropic.nb
-│   ├── PetrovTypeD-in-spherical.nb
-│   └── PetrovTypeD-in-toroidal.nb
-├── 16-btz-black-hole
-│   ├── BTZBlackHole-in-cartesian.nb
-│   ├── BTZBlackHole-in-cylindrical.nb
-│   ├── BTZBlackHole-in-harmonic.nb
-│   ├── BTZBlackHole-in-isotropic.nb
-│   ├── BTZBlackHole-in-spherical.nb
-│   └── BTZBlackHole-in-toroidal.nb
-├── 17-c
-│   ├── CMetric-in-cartesian.nb
-│   ├── CMetric-in-cylindrical.nb
-│   ├── CMetric-in-harmonic.nb
-│   ├── CMetric-in-isotropic.nb
-│   ├── CMetric-in-spherical.nb
-│   └── CMetric-in-toroidal.nb
-├── 18-weyl
-│   ├── Weyl-in-cartesian.nb
-│   ├── Weyl-in-cylindrical.nb
-│   ├── Weyl-in-harmonic.nb
-│   ├── Weyl-in-isotropic.nb
-│   ├── Weyl-in-spherical.nb
-│   └── Weyl-in-toroidal.nb
-├── 19-lewis-papapetrou
-│   ├── LewisPapapetrou-in-cartesian.nb
-│   ├── LewisPapapetrou-in-cylindrical.nb
-│   ├── LewisPapapetrou-in-harmonic.nb
-│   ├── LewisPapapetrou-in-isotropic.nb
-│   ├── LewisPapapetrou-in-spherical.nb
-│   └── LewisPapapetrou-in-toroidal.nb
-├── 20-majumdar-papapetrou
-│   ├── MajumdarPapapetrou-in-cartesian.nb
-│   ├── MajumdarPapapetrou-in-cylindrical.nb
-│   ├── MajumdarPapapetrou-in-harmonic.nb
-│   ├── MajumdarPapapetrou-in-isotropic.nb
-│   ├── MajumdarPapapetrou-in-spherical.nb
-│   └── MajumdarPapapetrou-in-toroidal.nb
-├── 21-bonnor-metzner-sachs
-│   ├── BonnorMetznerSachs-in-cartesian.nb
-│   ├── BonnorMetznerSachs-in-cylindrical.nb
-│   ├── BonnorMetznerSachs-in-harmonic.nb
-│   ├── BonnorMetznerSachs-in-isotropic.nb
-│   ├── BonnorMetznerSachs-in-spherical.nb
-│   └── BonnorMetznerSachs-in-toroidal.nb
-├── 22-ernst
-│   ├── Ernst-in-cartesian.nb
-│   ├── Ernst-in-cylindrical.nb
-│   ├── Ernst-in-harmonic.nb
-│   ├── Ernst-in-isotropic.nb
-│   ├── Ernst-in-spherical.nb
-│   └── Ernst-in-toroidal.nb
-├── 23-melvin
-│   ├── Melvin-in-cartesian.nb
-│   ├── Melvin-in-cylindrical.nb
-│   ├── Melvin-in-harmonic.nb
-│   ├── Melvin-in-isotropic.nb
-│   ├── Melvin-in-spherical.nb
-│   └── Melvin-in-toroidal.nb
-├── 24-lemaitre-tolman-bondi
-│   ├── LemaitreTolmanBondi-in-cartesian.nb
-│   ├── LemaitreTolmanBondi-in-cylindrical.nb
-│   ├── LemaitreTolmanBondi-in-harmonic.nb
-│   ├── LemaitreTolmanBondi-in-isotropic.nb
-│   ├── LemaitreTolmanBondi-in-spherical.nb
-│   └── LemaitreTolmanBondi-in-toroidal.nb
-├── 25-szekeres
-│   ├── Szekeres-in-cartesian.nb
-│   ├── Szekeres-in-cylindrical.nb
-│   ├── Szekeres-in-harmonic.nb
-│   ├── Szekeres-in-isotropic.nb
-│   ├── Szekeres-in-spherical.nb
-│   └── Szekeres-in-toroidal.nb
-├── 26-robinson-trautman
-│   ├── RobinsonTrautman-in-cartesian.nb
-│   ├── RobinsonTrautman-in-cylindrical.nb
-│   ├── RobinsonTrautman-in-harmonic.nb
-│   ├── RobinsonTrautman-in-isotropic.nb
-│   ├── RobinsonTrautman-in-spherical.nb
-│   └── RobinsonTrautman-in-toroidal.nb
-├── 27-kundt
-│   ├── Kundt-in-cartesian.nb
-│   ├── Kundt-in-cylindrical.nb
-│   ├── Kundt-in-harmonic.nb
-│   ├── Kundt-in-isotropic.nb
-│   ├── Kundt-in-spherical.nb
-│   └── Kundt-in-toroidal.nb
-├── 28-myers-perry
-│   ├── MyersPerry-in-cartesian.nb
-│   ├── MyersPerry-in-cylindrical.nb
-│   ├── MyersPerry-in-harmonic.nb
-│   ├── MyersPerry-in-isotropic.nb
-│   ├── MyersPerry-in-spherical.nb
-│   └── MyersPerry-in-toroidal.nb
-├── 28myers-perry
-├── 29-lifshitz
-│   ├── Lifshitz-in-cartesian.nb
-│   ├── Lifshitz-in-cylindrical.nb
-│   ├── Lifshitz-in-harmonic.nb
-│   ├── Lifshitz-in-isotropic.nb
-│   ├── Lifshitz-in-spherical.nb
-│   └── Lifshitz-in-toroidal.nb
-├── 30-alcubierre
-│   ├── Alcubierre-in-cartesian.nb
-│   ├── Alcubierre-in-cylindrical.nb
-│   ├── Alcubierre-in-harmonic.nb
-│   ├── Alcubierre-in-isotropic.nb
-│   ├── Alcubierre-in-spherical.nb
-│   └── Alcubierre-in-toroidal.nb
-├── 31-plebanski-demianski
-│   ├── PlebanskiDemianski-in-cartesian.nb
-│   ├── PlebanskiDemianski-in-cylindrical.nb
-│   ├── PlebanskiDemianski-in-harmonic.nb
-│   ├── PlebanskiDemianski-in-isotropic.nb
-│   ├── PlebanskiDemianski-in-spherical.nb
-│   └── PlebanskiDemianski-in-toroidal.nb
-├── 32-einstein-rosen-wave
-│   ├── EinsteinRosenWave-in-cartesian.nb
-│   ├── EinsteinRosenWave-in-cylindrical.nb
-│   ├── EinsteinRosenWave-in-harmonic.nb
-│   ├── EinsteinRosenWave-in-isotropic.nb
-│   ├── EinsteinRosenWave-in-spherical.nb
-│   └── EinsteinRosenWave-in-toroidal.nb
-├── 33-van-stockum
-│   ├── VanStockum-in-cartesian.nb
-│   ├── VanStockum-in-cylindrical.nb
-│   ├── VanStockum-in-harmonic.nb
-│   ├── VanStockum-in-isotropic.nb
-│   ├── VanStockum-in-spherical.nb
-│   └── VanStockum-in-toroidal.nb
-├── 34-tomimatsu-sato
-│   ├── TomimatsuSato-in-cartesian.nb
-│   ├── TomimatsuSato-in-cylindrical.nb
-│   ├── TomimatsuSato-in-harmonic.nb
-│   ├── TomimatsuSato-in-isotropic.nb
-│   ├── TomimatsuSato-in-spherical.nb
-│   └── TomimatsuSato-in-toroidal.nb
-├── 34-tomimtsu-sato
-├── 35-belinskii-khalatnikov-lifshitz
-│   ├── BKL-in-cartesian.nb
-│   ├── BKL-in-cylindrical.nb
-│   ├── BKL-in-harmonic.nb
-│   ├── BKL-in-isotropic.nb
-│   ├── BKL-in-spherical.nb
-│   └── BKL-in-toroidal.nb
-├── 36-kantowski-sachs-cosmology
-│   ├── KantowskiSachs-in-cartesian.nb
-│   ├── KantowskiSachs-in-cylindrical.nb
-│   ├── KantowskiSachs-in-harmonic.nb
-│   ├── KantowskiSachs-in-isotropic.nb
-│   ├── KantowskiSachs-in-spherical.nb
-│   └── KantowskiSachs-in-toroidal.nb
-├── 37-mcvittie
-│   ├── McVittie-in-cartesian.nb
-│   ├── McVittie-in-cylindrical.nb
-│   ├── McVittie-in-harmonic.nb
-│   ├── McVittie-in-isotropic.nb
-│   ├── McVittie-in-spherical.nb
-│   └── McVittie-in-toroidal.nb
-├── 38-kinnersley-walker
-│   ├── KinnersleyWalker-in-cartesian.nb
-│   ├── KinnersleyWalker-in-cylindrical.nb
-│   ├── KinnersleyWalker-in-harmonic.nb
-│   ├── KinnersleyWalker-in-isotropic.nb
-│   ├── KinnersleyWalker-in-spherical.nb
-│   └── KinnersleyWalker-in-toroidal.nb
-├── 3-kerr
-│   ├── Kerr-in-advanced-retarded-time.nb
-│   ├── Kerr-in-bipolar.nb
-│   ├── Kerr-in-bispherical.nb
-│   ├── Kerr-in-bms.nb
-│   ├── Kerr-in-bondi.nb
-│   ├── Kerr-in-boyer-lindquist.nb
-│   ├── Kerr-in-cartesian.nb
-│   ├── Kerr-in-comoving.nb
-│   ├── Kerr-in-complex.nb
-│   ├── Kerr-in-confocal-ellipsoidal.nb
-│   ├── Kerr-in-conformal.nb
-│   ├── Kerr-in-conical.nb
-│   ├── Kerr-in-curvature.nb
-│   ├── Kerr-in-cylindrical.nb
-│   ├── Kerr-in-double-null.nb
-│   ├── Kerr-in-eddington-finkelstein.nb
-│   ├── Kerr-in-elliptic-cylindrical.nb
-│   ├── Kerr-in-fermi-normal.nb
-│   ├── Kerr-in-gaussian-normal.nb
-│   ├── Kerr-in-gaussian-null.nb
-│   ├── Kerr-in-geodesic-polar.nb
-│   ├── Kerr-in-global-patch.nb
-│   ├── Kerr-in-harmonic.nb
-│   ├── Kerr-in-horocyclic.nb
-│   ├── Kerr-in-horospheric.nb
-│   ├── Kerr-in-hyperspherical.nb
-│   ├── Kerr-in-isothermal.nb
-│   ├── Kerr-in-isotropic.nb
-│   ├── Kerr-in-jacobi-elliptic.nb
-│   ├── Kerr-in-kaluza-klein.nb
-│   ├── Kerr-in-kerr-schild.nb
-│   ├── Kerr-in-kruskal-szekeres.nb
-│   ├── Kerr-in-lemaitre.nb
-│   ├── Kerr-in-light-cone.nb
-│   ├── Kerr-in-milne.nb
-│   ├── Kerr-in-newman-penrose.nb
-│   ├── Kerr-in-newman-unti.nb
-│   ├── Kerr-in-novikov.nb
-│   ├── Kerr-in-null.nb
-│   ├── Kerr-in-oblate-spheroidal.nb
-│   ├── Kerr-in-painleve-gullstrand.nb
-│   ├── Kerr-in-parabolic.nb
-│   ├── Kerr-in-paraboloidal.nb
-│   ├── Kerr-in-penrose.nb
-│   ├── Kerr-in-poincare-disk.nb
-│   ├── Kerr-in-poincare-half-space.nb
-│   ├── Kerr-in-prolate-spheroidal.nb
-│   ├── Kerr-in-proper-distance.nb
-│   ├── Kerr-in-regge-wheeler.nb
-│   ├── Kerr-in-rindler.nb
-│   ├── Kerr-in-static-patch.nb
-│   ├── Kerr-in-synchronous.nb
-│   ├── Kerr-in-szekeres-szafron.nb
-│   ├── Kerr-in-tetrad-frames.nb
-│   ├── Kerr-in-toroidal.nb
-│   ├── Kerr-in-twistor.nb
-│   ├── Kerr-in-weyl-canonical.nb
-│   └── Kerr-in-york-time.nb
-├── LICENSE
-├── README.md
-```
+- **Metric Folders**: Each exact solution has a dedicated directory.
+  - `{MetricName}-derivation.nb` — Full symbolic derivation and tensor computations.
+  - `{MetricName}-in-{Coordinate}.nb` — Coordinate transformations into various meaningful systems (e.g., Spherical, Kruskal, Isotropic).
+  - `diag-{MetricName}-in-{Coordinate}.nb` — Penrose diagrams visualizing the global causal structure in those coordinates.
+  - `metadata.json` — Machine-readable metadata summarizing key properties and references.
 
-## Analysis Framework
+- **Comprehensive Coverage**: We aim to support *all physically and mathematically relevant* coordinate systems for every metric.
 
-Each notebook follows a consistent structure for the analysis of transformed metrics:
+- **Future-Ready**: While starting with Mathematica + xAct, the project is designed to incorporate other symbolic frameworks such as SageMath and SymPy.
 
-1. **Original Metric Definition**: Standard form of the spacetime solution
-2. **Coordinate Transformation**: Explicit transformation equations
-3. **Jacobian Computation**: Analysis of the transformation properties
-4. **Metric Transformation**: Implementation of the coordinate change
-5. **Verification**: Checking the validity of the transformed solution
-6. **Geometric Analysis**:
-   - Metric signature and determinant
-   - Curvature scalars (Ricci scalar, Kretschmann, Weyl invariants)
-   - Coordinate ranges and singularities
-   - Horizon conditions
-   - Killing vector fields
-   - Light cone structure and causality
-   - Jacobian invertibility regions
-7. **Visualization**: Coordinate surfaces and embedding diagrams (where applicable)
+---
 
-## Technical Requirements
+### Why Einstein Atlas?
 
-- Mathematica 13.0 or higher
-- xAct package suite (xTensor, xCoba, etc.)
-- xTras package (optional, for additional tensor capabilities)
+- **Scientific Rigor**: Every metric is derived and checked symbolically.
+- **Reproducibility**: Notebooks allow anyone to verify, extend, or adapt computations.
+- **Educational Value**: A tool for researchers, educators, and students to explore exact solutions in GR with hands-on computational resources.
+- **Open Collaboration**: Encouraging contributions, corrections, and expansions from the global community.
 
-## Installation and Setup
+---
 
-1. Clone this repository:
-   ```
-   git clone https://github.com/username/GRCoordX.git
-   ```
+### How to Use This Repository
 
-2. Ensure Mathematica and xAct are properly installed. For xAct installation instructions, visit [xAct's official website](http://www.xact.es).
+- **Exploration**: Open the notebooks in Mathematica to study detailed derivations and coordinate transformations.
+- **Extension**: Add new metrics or coordinates following the naming and organizational conventions.
+- **Visualization**: Use the Penrose diagram notebooks to understand the causal structure of spacetimes.
+- **Automation**: Future releases will include scripts and APIs to query and interact programmatically.
 
-3. Load the notebooks in Mathematica.
+---
 
-## Special Focus: Toroidal Coordinates
+### Getting Started
 
-A primary contribution of this project is the detailed analysis of exact GR solutions in toroidal coordinates. This perspective offers unique insights into:
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/ISK-Research/einstein-atlas.git
+   cd einstein-atlas
+   ````
 
-- Horizon geometry in black hole spacetimes
-- Singularity structure in Kerr and Kerr-Newman metrics
-- Cosmological horizons in de Sitter space
-- Causal structures in various spacetimes
+2. Open any `.nb` file in Mathematica. Ensure you have **xAct** installed (see [xAct.net](http://www.xact.es)).
 
-## Usage Examples
+3. Follow the notebooks’ instructions to run the derivations or explore coordinate charts.
 
-Each notebook can be executed independently to perform the transformation and analysis. For example, to explore the Schwarzschild metric in toroidal coordinates:
+---
 
-1. Open `Series2_Schwarzschild/2.3_Schwarzschild_Toroidal.nb`
-2. Execute the notebook cells sequentially
-3. Review the transformed metric and geometric analysis
-4. Explore the visualizations of coordinate surfaces
+### Contribution Guidelines
 
-## Methodology
+We welcome new metric submissions, coordinate transformations, and diagram enhancements. Please:
 
-The project employs rigorous tensor manipulation techniques using the xAct package to ensure coordinate-invariant analysis. Each transformation is verified through:
+* Follow the established folder and file naming conventions.
+* Provide a complete derivation notebook.
+* Include references in `metadata.json`.
+* Test notebooks for consistency and correctness.
 
-- Consistency checks of curvature invariants
-- Examination of singularity structure
-- Analysis of metric signature and determinant
-- Verification of Einstein field equations in the transformed coordinates
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed instructions.
 
-## Contributing
+---
 
-Contributions to GRCoordX are welcome. To contribute:
+### License & Citation
 
-1. Fork the repository
-2. Create a new branch for your feature
-3. Add your notebook or improvements
-4. Submit a pull request
+This project is licensed under the **GPL-3.0 License**.
 
-Please ensure that new notebooks follow the established structure and include comprehensive analysis of the transformed metrics.
+If you use **Einstein Atlas** in your research, please cite:
 
-## Citation
+> Independent Society of Knowledge (ISK), *Einstein Atlas*, [https://github.com/iskresearch/einstein-atlas](https://github.com/iskresearch/einstein-atlas)
 
-If you use these notebooks in your research, please cite:
+---
 
-```
-@misc{GRCoordX2025,
-  author = {Your Name},
-  title = {GRCoordX: Coordinate Transformation Analysis of Exact Solutions in General Relativity},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/username/GRCoordX}
-}
-```
+### Contact & Support
 
-## License
+For questions, suggestions, or to join the ISK research community, reach out via:
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+* Website: [https://research.iskportal.com/einstein-atlas](https://research.iskportal.com/einstein-atlas)
+* Email: [contact@iskportal.com](mailto:contact@iskportal.com)
+* GitHub Discussions: [Einstein Atlas Discussions](https://github.com/ISK-Research/Einstein-Atlas/discussions)
 
-## Contact
+---
 
-For questions or collaboration opportunities, please open an issue on this repository or contact [your email/contact information].
+### About ISK
+
+The **Independent Society of Knowledge (ISK)** is a global research collective dedicated to advancing open, reproducible, and collaborative science. Our mission is to **break the chains** of knowledge silos and empower researchers worldwide.
+
+
+
