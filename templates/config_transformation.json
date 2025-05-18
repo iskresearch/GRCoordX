@@ -1,0 +1,12 @@
+{
+	"name": "Name of Transformation",
+	
+	"from": "Name of initial chart",
+	"to": "Name of final chart",
+	
+	"rule": {
+		"symbol1": "rule1 in Mathematica input form",
+		"symbol2": "rule2 in Mathematica input form",
+	}
+}
+	

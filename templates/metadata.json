@@ -1,0 +1,67 @@
+{
+  "id": "schwarzschild-chart-ss", 
+  "type": "chart", 
+  "version": "1.0.0",
+  "title": "Schwarzschild Coordinates",
+  "description": "Standard Schwarzschild coordinates for vacuum solution in GR.",
+
+  "createdAt": "2025-05-18T12:00:00Z",
+  "updatedAt": null,
+  "validatedAt": null,
+
+  "status": {
+    "generation": "automated",
+    "validation": "pending",
+    "verifiedBy": null,
+    "reviewNotes": null
+  },
+
+  "contributors": [
+    {
+      "name": "Kid A",
+      "role": ["author", "designer", "reviewer"],
+      "email": "kida@einsteinatlas.org",
+      "affiliation": "ISK",
+      "contribution": "Designed chart structure and coordinate system."
+    },
+    {
+      "name": "Xavier",
+      "role": ["generator"],
+      "tool": "EinsteinAtlas.Automator",
+      "contribution": "Generated ds² expression and transformation rule using symbolic engine."
+    }
+  ],
+
+  "maintainers": [
+    {
+      "name": "Kid A",
+      "email": "kida@einsteinatlas.org",
+      "affiliation": "ISK",
+      "since": "2025-01-01"
+    }
+  ],
+
+  "associations": {
+    "spacetime": "Schwarzschild",
+    "charts": ["EF", "Kruskal"],
+    "transformations": ["toEF", "toKruskal"],
+    "relatedFiles": [
+      "spacetimes/schwarzschild.json",
+      "charts/EF.json",
+      "transformations/toEF.json"
+    ],
+    "linkedPapers": [
+      {
+        "title": "On the Gravitational Field of a Sphere",
+        "author": "Karl Schwarzschild",
+        "arxiv": null,
+        "doi": "10.1002/andp.19163550905",
+        "year": 1916
+      }
+    ]
+  },
+
+  "tags": ["spherical", "vacuum", "exact", "static"],
+  "notes": "Chart covers exterior region only (r > 2M)."
+}
+

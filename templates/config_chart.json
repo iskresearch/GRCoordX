@@ -1,0 +1,10 @@
+{
+	"name": "Name of the Chart",
+	"abbrev":  "Abbreviation Used in Mathematica or MathSage",
+	"description": "Brief description of the chart",
+	
+	"dimension": 4,
+	"symbols": ["t","r","\\[Theta]", "\\[Phi]"],
+	
+	"transformations": ["toSpherical"]
+}

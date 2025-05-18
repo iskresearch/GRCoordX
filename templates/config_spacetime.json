@@ -1,0 +1,22 @@
+{
+	"name": "Name of the Metric",
+	"abbrev": "Abbreviation Used in Mathematica or MathSage",
+	"description": "Brief description of the spacetime",
+	
+	"defined": null,
+	"derived": null,
+	"signature": -1,
+	"dimensions": 4,
+	
+	"charts": [
+		{
+			"chartName": "Name of the Chart",
+			"xlineElement": "write ds2 in form of Mathematica InputForm",
+			"validated": null,
+			"constantSymbols"
+		}
+	],
+	"desiredProperties": ["christoffels","ricci", "riemann", "einstein", "weyl", "g00", "infiniteRedShift", "horizons", "singularities", "limits"],
+	"diagrams": 
+}
+	
