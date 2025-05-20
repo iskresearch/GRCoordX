@@ -1,0 +1,29 @@
+{
+  "name": "Kerr-Taub-NUT spacetime metric",
+  "abbrev": "kerrTaubNut",
+  "description": "The Kerr-Taub-NUT metric is a solution to the Einstein field equations that describes the spacetime around a rotating, uncharged, massless, and nut-free black hole. It is a generalization of the Kerr metric, which includes the effects of rotation and electric charge, and the Taub-NUT metric, which includes the effects of nut charge. The metric is a solution to the Einstein field equations for a spacetime with a non-vanishing cosmological constant.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "kerrTaubNutCoordinates",
+      "xlineElement": "DSquare = (-1 - 2*m/(r^2 + a^2*cos[s]^2)) * (1 - 2*m*r/(r^2 + a^2*cos[s]^2))^(-1) * (dtau^2) + (1 - 2*m*r/(r^2 + a^2*cos[s]^2)) * (1 - 2*m/(r^2 + a^2*cos[s]^2))^(-1) * (dr^2) + (r^2 + a^2*cos[s]^2) * (1 - 2*m*r/(r^2 + a^2*cos[s]^2))^(-1) * (dtheta^2) + (r^2 + a^2*cos[s]^2) * (1 - 2*m/(r^2 + a^2*cos[s]^2))^(-1) * (sin[s]^2) * (dphi^2) + (1 - 2*m/(r^2 + a^2*cos[s]^2))^(-1) * (1/(r^2 + a^2*cos[s]^2)) * (dpsi^2)",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

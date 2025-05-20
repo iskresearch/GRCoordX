@@ -1,0 +1,28 @@
+{
+  "name": "Schwarzschild Interior Metric",
+  "abbrev": "SchwarzschildInterior",
+  "description": "The Schwarzschild interior metric is a spacetime metric that describes the curvature of spacetime around a spherically symmetric, non-rotating mass. It is a solution to Einstein's field equations and is used to model the gravitational field of a star or other massive object.",
+  "defined": true,
+  "derived": false,
+  "signature": 1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Spherical",
+      "xlineElement": "-\n(*dt^2)/(1 - 2m/r) + (*dr^2)/((1 - 2m/r)*r^2) + r^2*(*dth^2)/((1 - 2m/r)*sin(th)^2) + r^2*(*drh^2)*sin(th)^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

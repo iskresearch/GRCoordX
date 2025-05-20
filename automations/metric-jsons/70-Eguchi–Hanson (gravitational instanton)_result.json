@@ -1,0 +1,28 @@
+{
+  "name": "Eguchi\u2013Hanson Gravitational Instanton",
+  "abbrev": "eguchiHanson",
+  "description": "A four-dimensional gravitational instanton, a solution to Einstein's general relativity equations describing the spacetime around a black hole in four-dimensional anti-de Sitter spacetime.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Eguchi\u2013Hanson Chart",
+      "xlineElement": "ds^2 = (r^2-1)/(4*r^2)*(-dt^2 + (1/r^2)*dr^2) + (r^2-1)/r^2*(d\u03b8^2 + sin^2(\u03b8)*d\u03c6^2)",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

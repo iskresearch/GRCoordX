@@ -1,0 +1,29 @@
+{
+  "name": "Taub\u2013NUT metric in four-dimensional spacetime",
+  "abbrev": "TaubNUT",
+  "description": "The Taub\u2013NUT metric is a four-dimensional spacetime metric that generalizes the Schwarzschild metric and describes the spacetime surrounding a rotating black hole with angular momentum.",
+  "defined": true,
+  "derived": true,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "KerrNUT",
+      "xlineElement": "DSq := - (1 - 2*m/r - (a^2*m)/(r^2) + 2*a^2/(r^2*sqrt(r^2 + a^2))) * DT + (1 - 2*m/r - (a^2*m)/(r^2) + 2*a^2/(r^2*sqrt(r^2 + a^2))) * DR^2 + (r^2 + a^2)^2/(r^2 + a^2) * DTHAT^2 + (r^2 + a^2)^2/(r^2 + a^2) * DPHI^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

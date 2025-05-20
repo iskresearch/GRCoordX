@@ -1,0 +1,28 @@
+{
+  "name": "Synge's metric for the gravitational field of a rotating star",
+  "abbrev": "synge",
+  "description": "A Lorentzian metric describing the spacetime around a rotating star, accounting for its gravitational field.",
+  "defined": true,
+  "derived": true,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Spherical",
+      "xlineElement": "-(1-2*m/r)*(dt)^2 + (1/m)*(1-2*m/r)^(-1)*(dr)^2 + r^2*(d\\theta)^2 + r^2*(sin(\\theta))^2*(d\\phi)^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}
