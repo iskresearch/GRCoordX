@@ -1,0 +1,29 @@
+{
+  "name": "Levi-Civita metric of the spacetime",
+  "abbrev": "leviCivitaMetric",
+  "description": "A well-known spacetime metric that is used to describe the curvature of spacetime in general relativity, providing a framework for understanding the behavior of massive objects and the effects of gravity.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "ds\u00b2 == -dt\u00b2 + dx\u00b2 + dy\u00b2 + dz\u00b2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

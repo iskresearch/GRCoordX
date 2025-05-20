@@ -1,0 +1,29 @@
+{
+  "name": "Doran's metric",
+  "abbrev": "doranMetric",
+  "description": "A spacetime metric proposed by John Doran, potentially describing the physics of a universe with a cosmological constant.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "ds\u00b2 = -dt\u00b2 + dx\u00b2 + dy\u00b2 + dz\u00b2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

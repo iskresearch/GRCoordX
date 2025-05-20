@@ -1,0 +1,32 @@
+{
+  "name": "Erez\u2013Rosen Metric",
+  "abbrev": "ErezRosen",
+  "description": "The Erez\u2013Rosen metric is a solution to the Einstein field equations, describing a rotating, charged, and massive object. It is a notable example of a spacetime with an ergosphere, where the rotation of the object creates a region where the curvature of spacetime is such that a closed timelike curve can be formed.",
+  "defined": true,
+  "derived": false,
+  "signature": [
+    -1,
+    0,
+    1
+  ],
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "ErezRosen",
+      "xlineElement": "ds^2 = - (1 - 2M/r) dt^2 + (1 - 2M/r)^{-1} dr^2 + r^2 (d\u03b8^2 + sin^2\u03b8 d\u03c6^2) + (r^2 + a^2 cos^2\u03b8) (d\u03c6 - \u03c9 dt)^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

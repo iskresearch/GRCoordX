@@ -1,0 +1,28 @@
+{
+  "name": "Taub-NUT Spacetime Metric",
+  "abbrev": "TaubNUT",
+  "description": "The Taub-NUT spacetime metric is a solution to Einstein's field equations, describing a spacetime with a black hole and a NUT (non-unimodular torsion) component. It is a significant example of a spacetime with a rich structure and interesting physical properties.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "ds\u00b2 = (-1 + 2M/r + 2N/r\u00b3)dt\u00b2 + (1 - 2M/r + 2N/r\u00b3)dr\u00b2 + r\u00b2(d\u03b8\u00b2 + sin\u00b2\u03b8d\u03c6\u00b2)",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

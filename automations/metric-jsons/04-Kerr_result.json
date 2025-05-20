@@ -1,0 +1,33 @@
+{
+  "name": "The Kerr metric in general relativity",
+  "abbrev": "kerr",
+  "description": "The Kerr metric is a solution to the Einstein field equations that describes the spacetime around a rotating, uncharged black hole. It is a simplification of the more general Reissner-Nordstr\u00f6m metric, which includes charge.",
+  "defined": true,
+  "derived": false,
+  "signature": {
+    "t": 1,
+    "r": -1,
+    "\\[Theta]": -1,
+    "\\[Phi]": -1
+  },
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Kerr",
+      "xlineElement": "(- (1 - 2*M/r) * dt^2) + (1 - 2*M/r - (a*r)^2/(r^2*(1 + (a^2)/r^2))) * dr^2 + (r^2*(1 + (a^2)/r^2)) * (d\\[Theta]^2) + (r^2*sin(\\[Theta])^2*(1 + (a^2)/r^2 - (a*(a*r)/r^2)^2)) * (d\\[Phi]^2) + 2*(a*M*r/(r^2*(1 + (a^2)/r^2))) * (dt*d\\[Phi])",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

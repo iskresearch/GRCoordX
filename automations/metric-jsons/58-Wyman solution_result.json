@@ -1,0 +1,29 @@
+{
+  "name": "Wyman solution: Static spherically symmetric spacetime",
+  "abbrev": "wyman",
+  "description": "The Wyman solution is a static spherically symmetric spacetime solution to Einstein's general theory of relativity, describing a massive point-like object. It is a simplified model of a star, ignoring rotation and charge.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Spherical",
+      "xlineElement": "(-1/(1 - (r^2)/a^2))*dt^2 + (1/(1 - (r^2)/a^2))*dr^2 + (r^2)*d\u03b8^2 + (r^2)*sin(\u03b8)^2*d\u03c6^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

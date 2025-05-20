@@ -1,0 +1,28 @@
+{
+  "name": "de Sitter spacetime metric",
+  "abbrev": "dS",
+  "description": "The de Sitter spacetime metric describes an expanding universe with a positive cosmological constant, often used in cosmology and particle physics.",
+  "defined": true,
+  "derived": false,
+  "signature": 1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "dS",
+      "xlineElement": "-dt^2 + (1/(1 - (1/(4*Lambda)*t^2 - r^2)^1.5))*dr^2 + (1/(1 - (1/(4*Lambda)*t^2 - r^2)^1.5))*r^2*d\\[Theta]^2 + r^2*sin^2(\\[Theta])*d\\[Phi]^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

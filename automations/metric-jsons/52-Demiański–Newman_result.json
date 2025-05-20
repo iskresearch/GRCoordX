@@ -1,0 +1,28 @@
+{
+  "name": "Demia\u0144ski\u2013Newman Metric with Electric Charge and Angular Momentum",
+  "abbrev": "Demia\u0144skiNewman",
+  "description": "The Demia\u0144ski\u2013Newman metric is a solution to the Einstein field equations that describes the spacetime around a rotating, electrically charged black hole. It is a generalization of the Kerr metric that includes the effects of electric charge.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "(- (1 - 2 * M * r / (r^2 + a^2)) * (dt)^2 + (r^2 + a^2) * (dr)^2 + (r^2 * a^2 + (a * m * c)^2) * (d\u03b8)^2 + ((r^2 + a^2) * a + m * c * r) * (d\u03c6)^2) / (r^2 + a^2 + 2 * M * r)",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

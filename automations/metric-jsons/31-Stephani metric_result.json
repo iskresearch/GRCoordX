@@ -1,0 +1,34 @@
+{
+  "name": "Stephani metric, a type of exact solution to the Einstein field equations",
+  "abbrev": "stephani",
+  "description": "A solution to the Einstein field equations describing a rotating, axisymmetric, and stationary spacetime, commonly used to model black holes and other compact objects.",
+  "defined": true,
+  "derived": false,
+  "signature": {
+    "g00": -1,
+    "g11": 1,
+    "g22": 1,
+    "g33": 1
+  },
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Spheroidal",
+      "xlineElement": "DS2 = -dt^2 + (1 - 2M/r) dw^2 + r^2 (d\u03b8^2 + sin(\u03b8)^2 d\u03c6^2)",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

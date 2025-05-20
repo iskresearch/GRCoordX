@@ -1,0 +1,33 @@
+{
+  "name": "Minkowski spacetime metric",
+  "abbrev": "minkowski",
+  "description": "The Minkowski spacetime metric is a fundamental concept in special relativity, describing the geometry of spacetime in flat four-dimensional space. It is a Lorentzian metric, which means that it has a signature of (-1, 1, 1, 1) and is used to describe the geometry of spacetime in the absence of gravity.",
+  "defined": true,
+  "derived": false,
+  "signature": [
+    -1,
+    1,
+    1,
+    1
+  ],
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "ds^2 = -dt^2 + dx^2 + dy^2 + dz^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

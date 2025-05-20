@@ -1,0 +1,29 @@
+{
+    "name": "Vaidya metric in general-relativity",
+    "abbrev": "vaidya",
+    "description": "The Vaidya metric is a solution to the Einstein field equations, representing a spherically symmetric and asymptotically flat spacetime. It was first proposed by P. C. Vaidya in 1951. The metric is used to describe the gravitational field of a massive object, such as a star, in the context of general-relativity.",
+    "defined": true,
+    "derived": false,
+    "signature": -1,
+    "dimensions": 4,
+    "charts": [
+        {
+            "chartName": "Spherical",
+            "xlineElement": "(-2*M/r)*dt^2 + (1-2*M/r)*dr^2 + r^2*du03a9^2",
+            "validated": false
+        }
+    ],
+    "desiredProperties": [
+        "christoffels",
+        "ricci",
+        "riemann",
+        "einstein",
+        "weyl",
+        "g00",
+        "infiniteRedShift",
+        "horizons",
+        "singularities",
+        "limits"
+    ],
+    "diagrams": []
+}

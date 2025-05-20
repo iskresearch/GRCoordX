@@ -1,0 +1,29 @@
+{
+  "name": "Nariai Spacetime Metric",
+  "abbrev": "nariai",
+  "description": "The Nariai spacetime metric is a four-dimensional Lorentzian manifold that models a wormhole with a massless shell. It is a solution to the Einstein field equations and is used in the study of black hole physics and wormhole dynamics.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "NariaiChart",
+      "xlineElement": "ds\u00b2 = (1 - 2M/r) dt\u00b2 - (1 - 2M/r)^(-1) dr\u00b2 - r\u00b2 d\u03a9\u00b2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

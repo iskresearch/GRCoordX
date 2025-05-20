@@ -1,0 +1,28 @@
+{
+  "name": "McVittie Metric for Spherically Symmetric Gravitational Collapse",
+  "abbrev": "mcvittie",
+  "description": "A spacetime metric describing the gravitational collapse of a spherically symmetric, non-rotating, massive object.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Spheroidal",
+      "xlineElement": "-((1-2m/r)*dt**2 + (1-2m/r)**(-1)*dr**2 + r**2*dtheta**2 + (r**2*sin(theta)**2)*dphi**2)",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

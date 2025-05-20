@@ -3,7 +3,7 @@ Generate a structured JSON for the spacetime metric known as Kerr–Newman.
 The response should be ONLY a valid JSON with the following structure:
 {
     "name": "The full formal name of the Kerr–Newman metric",
-    "abbrev": "The standard abbreviation used in Mathematica or MathSage",
+    "abbrev": "the name of the metric without spaces in camelCaseFormat",
     "description": "A brief, clear description of this spacetime, including its physical significance",
 
     "defined": "true if this spacetime metric is defined",
@@ -13,10 +13,9 @@ The response should be ONLY a valid JSON with the following structure:
 
     "charts": [
         {
-            "chartName": "The standard coordinate chart name for Kerr–Newman",
+            "chartName": "The coordinate chart name for Kerr–Newman without spaces e.g Cartesian",
             "xlineElement": "The line element (ds²) in Mathematica InputForm notation",
-            "validated": null,
-            "constantSymbols": ["List", "of", "constant", "symbols", "used", "in", "the", "metric"]
+            "validated": false,
         }
     ],
     "desiredProperties": ["christoffels", "ricci", "riemann", "einstein", "weyl", "g00", "infiniteRedShift", "horizons", "singularities", "limits"],

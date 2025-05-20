@@ -1,0 +1,28 @@
+{
+  "name": "Anti-de Sitter spacetime metric",
+  "abbrev": "AdS",
+  "description": "The Anti-de Sitter spacetime is a mathematical construct used to model certain types of spacetime curvature, particularly in the context of quantum gravity and cosmology. It is a spacetime with a negative cosmological constant, which leads to interesting properties and applications.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "AdS",
+      "xlineElement": "(-dt^2 + (dx^2 + dy^2 + dz^2) / (1 - (r^2) / l^2)) * (1 - (r^2) / l^2)^{-1}",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

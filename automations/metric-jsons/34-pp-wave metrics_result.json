@@ -1,0 +1,28 @@
+{
+  "name": "Plane-fronted Wave Metric",
+  "abbrev": "ppWave",
+  "description": "The pp-wave metric is a solution to the Einstein field equations that describes a plane-fronted wave in spacetime. It is a simple and well-known solution that has been used to study various aspects of gravitational waves and their interactions with matter.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "DSquared = -2eta*momentum^2 + 2momentum*(dx + dt) - dt^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

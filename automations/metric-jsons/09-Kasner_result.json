@@ -1,0 +1,28 @@
+{
+  "name": "Kasner metric",
+  "abbrev": "kasner",
+  "description": "The Kasner metric is a solution to Einstein's field equations that describes the spacetime geometry of an anisotropic, inhomogeneous universe. It is a simple, exact solution that has been used as a testing ground for understanding the behavior of more complex cosmological models.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Kasner",
+      "xlineElement": "ds\u00b2 == a(t)^2 * (dx^2 + dy^2) + b(t)^3 * (dt^2 + d\u03b8^2) + c(t)^4 * (dr^2 + r^2 * (d\u03c6^2 + sin(\u03b8)^2 * d\u03c8^2))",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

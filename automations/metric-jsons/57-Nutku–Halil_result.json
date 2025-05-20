@@ -1,0 +1,33 @@
+{
+  "name": "Nutku-Halil Metric in General Relativity",
+  "abbrev": "nutkuHalil",
+  "description": "The Nutku-Halil metric is a solution to Einstein's field equations that represents a wormhole in spacetime. It is a solution that can be used to model a traversable wormhole, a hypothetical shortcut through spacetime.",
+  "defined": true,
+  "derived": false,
+  "signature": {
+    "g00": -1,
+    "g11": 1,
+    "g22": 1,
+    "g33": 1
+  },
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "-dT^2 + (1-2Gm/r) dX^2 + r^2 dY^2 + r^2 dZ^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

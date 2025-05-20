@@ -1,0 +1,28 @@
+{
+  "name": "Kundt spacetime metric",
+  "abbrev": "kundt",
+  "description": "The Kundt metric is a solution of the Einstein field equations with a cylindrical symmetry, used to describe spacetime around rotating axisymmetric sources such as black holes or neutron stars.",
+  "defined": true,
+  "derived": false,
+  "signature": null,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "cylindrical",
+      "xlineElement": "(-dt^2) + (dr^2 + d\u03b8^2) + (dz + r dt)^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

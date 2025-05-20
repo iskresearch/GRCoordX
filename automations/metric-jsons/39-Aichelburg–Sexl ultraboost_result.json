@@ -1,0 +1,40 @@
+{
+  "name": "Aichelburg-Sexl Ultraboost Metric",
+  "abbrev": "ASUltraboost",
+  "description": "Aichelburg-Sexl ultraboost metric is a solution to the Einstein field equations describing a spacetime in the vicinity of a massless, electrically charged particle. It is a Lorentzian manifold with a curvature singularity at the particle's position.",
+  "defined": true,
+  "derived": true,
+  "signature": {
+    "$$": "1/2 * (- dt^2 + dx^2 + dy^2 + dz^2) + (m / r) * (1 - 1 / sqrt(1 + (m / r))) * dt^2",
+    "christoffels": null,
+    "ricci": null,
+    "riemann": null,
+    "einstein": null,
+    "weyl": null,
+    "g00": null,
+    "infiniteRedShift": true,
+    "horizons": null,
+    "singularities": true,
+    "limits": null
+  },
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "DSquare = -1/2*dt^2 + dx^2 + dy^2 + dz^2 + (m/r) * (1 - 1/Sqrt[1 + (m/r)]) * dt^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

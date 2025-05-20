@@ -1,0 +1,28 @@
+{
+  "name": "Kerr-de Sitter metric",
+  "abbrev": "KerrDeSitter",
+  "description": "The Kerr-de Sitter metric is a solution to the Einstein field equations that describes the spacetime around a rotating black hole in the presence of a cosmological constant. It combines the effects of the Kerr metric and the de Sitter metric.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "KerrDeSitter",
+      "xlineElement": "-((1 - (2*M*r)/(R^2)))*(dt^2) - ((R^2 + 2*M*r + (A^2)*(r^2))/(R^2)) * (dr^2) - r^2*d\u03b8^2 - ((R^2 + 2*M*r + (A^2)*(r^2))*(A^2)*(r^2)*sin^2(\u03b8))/((R^2)*sin^2(\u03b8)) * (d\u03c6^2) - 2*M*r*(1 - (2*M*r)/(R^2))*dt*d\u03c6",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

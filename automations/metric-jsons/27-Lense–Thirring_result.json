@@ -1,0 +1,28 @@
+{
+  "name": "Lense-Thirring Metric",
+  "abbrev": "lensethirring",
+  "description": "The Lense-Thirring metric describes the spacetime around a rotating mass. It was developed by Josef Lense and Hans Thirring to model the gravitational effects of a rotating black hole. The metric is used in general relativity to study the spacetime around a rotating mass and has implications for our understanding of black holes and gravity.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "ds\u00b2 = (1-2M/r - (3M^2/r^3) + 2J^2/r^4 * (x^2 + y^2) - 4J^2/r^3 * (x^2 + y^2) * (1-2M/r) - (3M^2/r^3) * (1-2M/r)) * dt^2 - (r^2 + 2M*r + 2J^2/r^2 * (x^2 + y^2)) * (dx^2 + dy^2 + dz^2) + (1-2M/r) * (1-2M/r) * (1-2M/r) * dr^2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}

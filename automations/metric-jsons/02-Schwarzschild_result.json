@@ -1,0 +1,29 @@
+{
+  "name": "Schwarzschild Metric",
+  "abbrev": "Schwarzschild",
+  "description": "The Schwarzschild metric describes the spacetime around a spherically symmetric, stationary, and uncharged black hole or a spherical shell of negative mass-energy density. It is a solution to the Einstein field equations and a cornerstone of general relativity.",
+  "defined": true,
+  "derived": false,
+  "signature": -1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Schwarzschild",
+      "xlineElement": "-(1 - 2*M/r)*dt^2 + (1 - 2*M/r)^(-1)*dr^2 + r^2*(d\\[Theta]^2 + sin(\\[Theta])^2*d\\[Phi]^2)",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

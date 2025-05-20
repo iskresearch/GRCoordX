@@ -1,0 +1,29 @@
+{
+  "name": "Chazy-Curzon spacetime metric",
+  "abbrev": "chazycurzon",
+  "description": "The Chazy-Curzon metric is a solution to the Einstein field equations describing a spacetime with a wormhole. It is an exact solution to the Einstein field equations with a non-zero cosmological constant.",
+  "defined": true,
+  "derived": false,
+  "signature": null,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "Cartesian",
+      "xlineElement": "ds\u00b2 = - (1 - 2m/r) dt\u00b2 + (1 - 2m/r)^(-1) dr\u00b2 + r\u00b2 d\u03b8\u00b2",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ],
+  "diagrams": []
+}

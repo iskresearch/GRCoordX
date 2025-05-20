@@ -1,0 +1,28 @@
+{
+  "name": "Kerr-Newman-de Sitter Metric",
+  "abbrev": "kerrNewmanDeSitter",
+  "description": "The Kerr-Newman-de Sitter metric is a solution to the Einstein-Maxwell equations, describing the spacetime of a rotating, charged, and massive object in a de Sitter universe.",
+  "defined": true,
+  "derived": false,
+  "signature": 1,
+  "dimensions": 4,
+  "charts": [
+    {
+      "chartName": "KerrNewmanDeSitter",
+      "xlineElement": "(-1/(1 - 2*m/r + (r^2*a^2 + q^2)/r^2) + (r^2 - 2*r + a^2 + 3*q^2)/(4*r^3)) * dt^2 + (1/(1 - 2*m/r + (r^2*a^2 + q^2)/r^2)) * dr^2 + (r^2/(r^2*a^2 + q^2 + 3*r^2)) * (dtheta^2 + sin^2(dphi^2))",
+      "validated": false
+    }
+  ],
+  "desiredProperties": [
+    "christoffels",
+    "ricci",
+    "riemann",
+    "einstein",
+    "weyl",
+    "g00",
+    "infiniteRedShift",
+    "horizons",
+    "singularities",
+    "limits"
+  ]
+}
